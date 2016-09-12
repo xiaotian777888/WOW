@@ -3,13 +3,13 @@
 Temporary deprecation:
 ======================
 
-wow.js is temporarily deprecated in favour of AOS (Animate on Scroll)
+wow.js is temporarily deprecated in favour of AOS (Animate on Scroll). Feel free to ignore the warning if you can't use AOS.
 
 Plans for 3.0 include:
 
 * Breaking out the shims into an optional module
 * Using the AOS approach for most functionality
-* Being completely backwards compatible, but warning on durations of higher granularity than 50ms
+* Remain completely backwards compatible and a drop-in replacement for GPL wowjs, but issue warning on durations of higher granularity than 50ms
 or longer than 3s
 * Detect Firefox for Android as mobile.
 
