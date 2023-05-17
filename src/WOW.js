@@ -43,7 +43,7 @@ function emitEvent(elem, event) {
 
 function addEvent(elem, event, fn) {
   if (elem.addEventListener != null) { // W3C DOM
-    elem.addEventListener(event, fn, false);
+    elem.addEventListener(event, fn, true);
   } else if (elem.attachEvent != null) { // IE DOM
     elem.attachEvent(`on${event}`, fn);
   } else { // fallback
@@ -53,7 +53,7 @@ function addEvent(elem, event, fn) {
 
 function removeEvent(elem, event, fn) {
   if (elem.removeEventListener != null) { // W3C DOM
-    elem.removeEventListener(event, fn, false);
+    elem.removeEventListener(event, fn, true);
   } else if (elem.detachEvent != null) { // IE DOM
     elem.detachEvent(`on${event}`, fn);
   } else { // fallback
@@ -401,7 +401,7 @@ export default class WOW {
     const offset = box.getAttribute('data-wow-offset') || this.config.offset;
     const viewTop = (
       this.config.scrollContainer && this.config.scrollContainer.scrollTop
-    ) || window.pageYOffset;
+    ) || window.pageYOffset || document.body.scrollTop;
     const viewBottom =
       viewTop + Math.min(this.element.clientHeight, getInnerHeight()) - offset;
     const top = this.offsetTop(box);

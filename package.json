@@ -1,12 +1,17 @@
 {
-  "name": "wow.js",
+  "name": "wow.js-juzi",
   "title": "WOW",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "main": "dist/wow.js",
   "description": "",
   "keywords": [],
   "homepage": "https://wowjs.uk",
   "contributors": [
+    {
+      "name": "juzi",
+      "email": "juzi90990@gmail.com",
+      "url": "https://github.com/xiaotian777888/"
+    },
     {
       "name": "Matthieu Aussaguel",
       "email": "matthieu.aussaguel@gmail.com",
